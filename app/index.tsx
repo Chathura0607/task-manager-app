@@ -23,7 +23,7 @@ const Index = () => {
         <view className='flex-1 w-full justify-center items-center'>
             <ActivityIndicator size="large"/>
             </view>
-    ) : null;
+    ) : null
 }
 
 export default Index
