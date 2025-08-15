@@ -40,18 +40,38 @@ const Register = () => {
     <View className="flex-1 w-full justify-center items-center">
       <Text className="text-4xl text-center">Register</Text>
 
-      <TextInput placeholder="Email" value={email} onChangeText={setEmail} className="bg-surface border border-gray-300 rounded px-4 py-3 mb-4 text-gray-800" />
-      <TextInput placeholder="Password" value={password} onChangeText={setPassword} secureTextEntry className="bg-surface border border-gray-300 rounded px-4 py-3 mb-4 text-gray-800" />
-      <TextInput placeholder="Confirm Password" value={cPassword} onChangeText={setConfirmPassword} secureTextEntry className="bg-surface border border-gray-300 rounded px-4 py-3 mb-4 text-gray-800" />
-      <TouchableOpacity onPress={handleRegister} className="bg-green-600 p-4 rounded mt-2">
-        {isLoading ? (<ActivityIndicator color="fff" size="large"/>) : (
-        <Text className="text-center text-2xl">Register</Text>)}
+      <TextInput
+        placeholder="Email"
+        value={email}
+        onChangeText={setEmail}
+        className="bg-surface border border-gray-300 rounded px-4 py-3 mb-4 text-gray-800"
+      />
+      <TextInput
+        placeholder="Password"
+        value={password}
+        onChangeText={setPassword}
+        secureTextEntry
+        className="bg-surface border border-gray-300 rounded px-4 py-3 mb-4 text-gray-800"
+      />
+      <TextInput
+        placeholder="Confirm Password"
+        value={cPassword}
+        onChangeText={setConfirmPassword}
+        secureTextEntry
+        className="bg-surface border border-gray-300 rounded px-4 py-3 mb-4 text-gray-800"
+      />
+      <TouchableOpacity
+        onPress={handleRegister}
+        className="bg-green-600 p-4 rounded mt-2"
+      >
+        {isLoading ? (
+          <ActivityIndicator color="#fff" size="large" />
+        ) : (
+          <Text className="text-center text-2xl text-white">Register</Text>
+        )}
       </TouchableOpacity>
 
-      <Pressable
-        className="px-6 py-3"
-        onPress={() => router.back()}
-      >
+      <Pressable className="px-6 py-3" onPress={() => router.back()}>
         <Text className="text-4xl text-center">Go to Login</Text>
       </Pressable>
     </View>
